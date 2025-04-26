@@ -2,38 +2,140 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>fast shopping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Shopping - MTB</title>
   <style>
-    body {
+    /* Reset global */
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Barra de menú */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #14de2cdf;
+      color: #303c6b;
+      background-image: url(imagenes/portada2.jpg);
+      
+      
+      
+    }
+    <h1 class="titulo-principal">Bienvenidos a Fast Shopping</h1>
+   
+    
+
+
+
+
+    /* Barra de navegación */
     .navbar {
       background-color: #ec0e0e;
       overflow: hidden;
     }
-
-    /* Estilo de los enlaces */
     .navbar a {
       float: left;
       display: block;
-      color: #f2f2f2;
+      color: #fff;
       text-align: center;
       padding: 14px 20px;
       text-decoration: none;
     }
-
-    /* Cambio de color al pasar el mouse */
     .navbar a:hover {
       background-color: #575757;
     }
 
-    /* Contenido principal */
+    /* Encabezado principal */
     .content {
-      padding: 20px;
+      text-align: center;
+      padding: 50px;
     }
+    .logo-movimiento {
+      width: 600px;
+      animation: mover 2s infinite alternate ease-in-out;
+    }
+    @keyframes mover {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    /* Galería de imágenes */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Sección de productos destacados */
+    .product-conten {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .product-1 {
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      background-color: #342222;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-1:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    .product-1 img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Botones */
+    .btn-1, .btn-2, .btn-3 {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #ec0e0e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn-1:hover, .btn-2:hover, .btn-3:hover {
+      background-color: #15884e;
+    }
+
   </style>
 </head>
 <body>
@@ -46,164 +148,50 @@
     <a href="contacto.html">Contacto</a>
   </div>
 
-  <!-- Contenido de la página -->
+  <!-- Encabezado principal -->
   <div class="content">
-    <h1>Bienvenidos a todos </h1>
-   <p> compras rapidas y faciles</p>
+    <h1>Bienvenidos a Fast Shopping</h1>
+    
+    
+    <img src="imagenes/mtb.jpg" alt="imagen de MTB" class="logo-movimiento">
   </div>
+
+  <!-- Galería de imágenes -->
+  <div class="gallery">
+    <img src="imagenes/cascosfox.jpg" alt="Casco MTB">
+    <img src="imagenes/rodileras fox.jpg" alt="Rodilleras MTB">
+    <img src="imagenes/frenos deore.jpg" alt="Frenos MTB">
+    <img src="imagenes/llantasmaxis.jpg" alt="Llantas MTB">
+  </div>
+
+  <!-- Productos destacados -->
+  <div class="product-conten">
+    <div class="product-1">
+      <img src="imagenes/suspensionfox.jpg" alt="Suspensión Fox">
+      <h3>Suspensión Fox Kashima Enduro</h3>
+      <p>$3999</p>
+      <a href="#" class="btn-1">Comprar</a>
+    </div>
+    <div class="product-1">
+      <img src="imagenes/redbullrampage.jpg" alt="Casco Redbull">
+      <h3>Casco Redbull Rampage</h3>
+      <p>$199</p>
+      <a href="#" class="btn-1">Comprar</a>
+    </div>
+    <div class="product-1">
+      <img src="imagenes/suspensionepixon.webp" alt="Suspensión Epixon">
+      <h3>Suspensión Epixon 29 QR</h3>
+      <p>$1000</p>
+      <a href="#" class="btn-1">Comprar</a>
+    </div>
+  </div>
+
+  body{
+    margin 0;
+    padding 0;
+    background-color: #f0f0f0;
+  }
+
 
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fast shopping</title>
-    <link rel="stylesheet" href="style.css">
-
-
-</head>
-<body>
-    <h1> Fast shopping</h1>
-    
-    <header  class="header">
-        
-        <div class="menu container">
-            <a href="#" class="logo" >fast shopping</a>
-            <h1>promociones y descuentos en MTB </h1> 
-            <p> Descuentos en 50% los fines de semana en cascos y guantes fox y de regalo <br>
-            te llevas tus luced leds GRATIS!!</p> 
-            <div class="butons">
-                <a href="#" class="btn-1">informacion</a>
-                <a href="#" class="btn-1">Cascos fox</a>
-
-            </div>
-            </div>
-        </div>
-
-    </header>
-
-    <section clas="popular container">
-        <h2>
-    Productos mas vendidos
-        </h2>
-            <div>
-                <img src="imagenes/cascosfox.jpg" width="150">
-                <img src="imagenes/rodileras fox.jpg"width="150">
-                <img src="imagenes/frenos deore.jpg"width="150">
-                <img src="imagenes/llantasmaxis.jpg"width="150">
-
-
-
-
-            </div>
-    </section>
-
-
-    <main class="product container">
-
-    <h2> las mejores ofertas </h2>
-        <div class="product-conten">
-            
-            <div class="product-1">
-                <img src="imagenes/suspensionfox.jpg" width="300">
-                <div class="product-txt">
-                    <h3> Suspension fox kashima enduro!!</h3>
-                    <div class="price">
-                        <p>$3999</p>
-                        <a href="#" class="btn-2">comprar</a>
-                        <button> agregar al carrito </button> 
-     
-                </div>
-                <br> <br>
-                
-          </div>
-      </div>
-
-      <div class="product-1">
-        <img src="imagenes/redbullrampage.jpg">
-        <div class="product-txt">
-            <h3> Casco de redbull rampage  </h3>
-            <div class="price">
-                <p>$199</p>
-                <a href="#" class="btn-2">comprar</a>
-                <button>
-                  agregar al carrito
-                </button>
-        </div>
-        <br><br>
-  </div>
-</div>
-
-<div class="product-1">
-    <img src="imagenes/suspensionepixon.webp" width="200">
-    <div class="product-txt">
-        <h3> Suspension epixon 29 QR </h3>
-        <div class="price">
-            <p>$1000</p>
-            <a href="#" class="btn-2">comprar</a>
-            <button> agregar al carrito </button>
-        </div>
-    </div>
-</div>
-
-<br>
-
-          
-
-<div class="product-1">
-    <img src="imagenes/frenos shimano deore xt.jpg" width="270">
-    <div class="product-txt">
-        <h3> frenos shimano deore xt 4 pistones </h3>
-        <div class="price">
-            <p>$499</p>
-        
-            <a href="#" class="btn-2">comprar</a>
-            <button>agregar al carrito </button>
-        </div>
-    </div>
-</div>
-        
-
-    </main>
-
-    <section class="contac container">
-        <div class="contac-contenido">
-            <h3> suscribete a nuestro blog </h3>
-            <form>
-                <imput type="email" placeholder="escribe tu correo">
-                <imput type="submit" class="btn-3" value="enviar">
-            </form>
-        </div>
-
-        <div>
-          
-    <img src="imagenes/maxis.jpg" width="270">
-    <div class="product-txt">
-        <h3> llantas maxis minion dh </h3>
-        <div class="price">
-            <p>$499</p>
-            <button>
-              agregar al carrito 
-            </button>
-        
-            <a href="#" class="btn-2">comprar</a>
-        </div>
-    </div>
-</div>
-        
-<br>
-
-
-
-
-    </section>
-
-    
-
-     
-      
-    
-
