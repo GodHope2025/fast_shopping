@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Shopping - MTB</title>
+  <style>
+    /* Reset global */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #14de2cdf;
+      color: #303c6b;
+      background-image: url(imagenes/portada2.jpg);
+    }
+
+    /* Barra de navegación */
+    .navbar {
+      background-color: #103621;
+      overflow: hidden;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Encabezado principal */
+    .content {
+      text-align: center;
+      padding: 50px;
+    }
+    .logo-movimiento {
+      width: 600px;
+      animation: mover 2s infinite alternate ease-in-out;
+    }
+    @keyframes mover {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    p {
+      font-size: 1.2em;
+      color: #666;
+    }
+
+    /* Galería de imágenes */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Sección de productos destacados */
+    .product-conten {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .product-1 {
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      background-color: #342222;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-1:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    .product-1 img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Botones */
+    .btn-1, .btn-2, .btn-3 {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #ec0e0e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn-1:hover, .btn-2:hover, .btn-3:hover {
+      background-color: #15884e;
+    }
+
+    /* Estilos del carrito */
+    .cart-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 300px;
+      background-color: #50a9a0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(8, 183, 236, 0.1);
+      z-index: 1000;
+    }
+    .cart-header {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .cart-items {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .cart-item span {
+      font-size: 1.1em;
+    }
+    .cart-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .cart-footer span {
+      font-weight: bold;
+    }
+    .cart-footer .total {
+      color: #090000;
+    }
+
+    
+   
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Barra de menú -->
+  <div class="navbar">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+
+  <!-- Encabezado principal -->
+  <div class="content">
+    <h1>Bienvenidos a Fast Shopping</h1>
+    <img src="imagenes/mtb.jpg" alt="imagen de MTB" class="logo-movimiento">
+  </div>
+
+  <!-- Galería de imágenes -->
+  <div class="gallery">
+    <img src="imagenes/cascosfox.jpg" alt="Casco MTB">
+    <img src="imagenes/rodileras fox.jpg" alt="Rodilleras MTB">
+    <img src="imagenes/frenos deore.jpg" alt="Frenos MTB">
+    <img src="imagenes/capraaa.jpg" alt="capraaa">
+  </div>
+
+  <!-- Productos destacados -->
+  <div class="product-conten">
+    <div class="product-1">
+      <img src="imagenes/suspensionfox.jpg" alt="Suspensión Fox">
+      <h3>Suspensión Fox Kashima Enduro</h3>
+      <p>$3999</p>
+      <a href="#" class="btn-1" data-name="Suspensión Fox Kashima Enduro" data-price="3999">Comprar</a>
+    </div>
+    <div class="product-1">
+      <img src="imagenes/redbullrampage.jpg" alt="Casco Redbull">
+      <h3>Casco Redbull Rampage</h3>
+      <p>$199</p>
+      <a href="#" class="btn-1" data-name="Casco Redbull Rampage" data-price="199">Comprar</a>
+    </div>
+    <div class="product-1">
+      <img src="imagenes/suspensionepixon.webp" alt="Suspensión Epixon">
+      <h3>Suspensión Epixon 29 QR</h3>
+      <p>$1000</p>
+      <a href="#" class="btn-1" data-name="Suspensión Epixon 29 QR" data-price="1000">Comprar</a>
+    </div>
+    <div class="product-1">
+      <img src="imagenes/llantasmaxis.jpg" alt="Llantas Maxxis">
+      <h3>Llantas Maxxis DH 29</h3>
+      <p>$250</p>
+      <a href="#" class="btn-1" data-name="Llantas Maxxis DH 29" data-price="250">Comprar</a>
+    </div>
+  </div>
+
+  <!-- Carrito de compras -->
+   
+  <div class="cart-container">
+    <div class="cart-header">Tu Carrito</div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <span>Total:</span>
+      <span class="total" id="cartTotal">$0</span>
+      <div class="cart">
+        <button id="vaciarcarrito" class="btn-1">vaciar carrito</button>
+     
+  <!-- Contenido del carrito -->
+</div>
+
+
+   
+  </div>
+
+  <script> 
+
+ // Inicializar el carrito
+let carrito = [];
+
+// Función para actualizar el carrito en el DOM
+function actualizarCarrito() {
+  const cartItemsDiv = document.getElementById('cartItems');
+  const cartTotalSpan = document.getElementById('cartTotal');
+  cartItemsDiv.innerHTML = '';
+  let total = 0;
+
+  carrito.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('cart-item');
+    itemDiv.innerHTML = `
+      <span>${item.name} x${item.quantity}</span>
+      <span>$${(item.price * item.quantity).toFixed(2)}</span>
+    `;
+    cartItemsDiv.appendChild(itemDiv);
+    total += item.price * item.quantity;
+  });
+
+  cartTotalSpan.textContent = `$${total.toFixed(2)}`;
+}
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+  carrito = []; // Vaciar el carrito
+  actualizarCarrito(); // Actualizar el carrito en el DOM
+}
+
+// Asignar eventos a los botones de compra
+document.querySelectorAll('.btn-1').forEach(boton => {
+  boton.addEventListener('click', (evento) => {
+    evento.preventDefault();
+    const name = boton.getAttribute('data-name');
+    const price = parseFloat(boton.getAttribute('data-price'));
+    agregarAlCarrito(name, price);
+  });
+});
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(name, price) {
+  const index = carrito.findIndex(item => item.name === name);
+  if (index !== -1) {
+    carrito[index].quantity++;
+  } else {
+    carrito.push({ name, price, quantity: 1 });
+  }
+  actualizarCarrito();
+}
+
+// Asociar el botón "vaciar carrito" con la función vaciarCarrito
+document.getElementById('vaciarcarrito').addEventListener('click', () => {
+  vaciarCarrito();
+});
+
+  </script>
+
+</body>
+</html>
+
