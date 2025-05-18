@@ -4,35 +4,133 @@
   <meta charset="UTF-8">
   <title>Mi Página Web</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    @keyframes moverFondo {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+     }
 
+     body {
+    
+      background-image:url("imagenes/imagen22.jpg");
+     background-size: cover;
+     background-repeat: repeat-x;
+     animation: moverFondo 30s linear infinite;
+    }
     /* Barra de menú */
     .navbar {
       background-color: #d43d3d;
       overflow: hidden;
     }
+    header{
+     background-image: url("imagenes/imagen1.jpg");
+      background-size: cover;
+     background-repeat: repeat-x;
+     animation: moverFondo 30s linear infinite;
+      color: #f8f4f4ef;
+      text-align: center;
+      font-family:'Times New Roman', Times, serif;
+      font-style:oblique;
+      text-shadow:-3px -3px 0 rgb(8, 8, 8),3px -3px 0 rgb(8, 8, 8),-3px 
+       3px 0 rgb(8, 8, 8),3px  3px 0 rgb(8, 8, 8);
+       
+    }
 
-    /* Estilo de los enlaces */
     .navbar a {
       float: left;
       display: block;
-      color: #f2f2f2;
+      color: #020202;
       text-align: center;
       padding: 14px 20px;
       text-decoration: none;
     }
 
-    /* Cambio de color al pasar el mouse */
     .navbar a:hover {
-      background-color: #575757;
+      background-color: #070707;
     }
 
     /* Contenido principal */
     .content {
       padding: 20px;
+    }
+
+    /* Estilos de los productos */
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .producto {
+      background:none;
+      border: 2px solid rgb(17, 17, 17);
+      border-radius: 5px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+    }
+
+    .producto h3 {
+      margin: 10px 0;
+    }
+
+    .producto p {
+      color: #0a0a0aef;
+    }
+
+    .producto button {
+      background-color: #4CAF50;
+      color: rgb(19, 18, 18);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .producto button:hover {
+      background-color: #45a049;
+    }
+
+    /* Estilos del carrito */
+    #carrito {
+      margin-top: 20px;
+    }
+
+    #carrito ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #carrito ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Estilo del botón de comprar */
+    #comprar-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #df6d41;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #comprar-btn img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    /* Mensaje de compra */
+    #mensaje-gracias {
+      font-size: 18px;
+      color: rgb(3, 3, 3);
+      display: none;
     }
   </style>
 </head>
@@ -40,115 +138,182 @@
 
   <!-- Barra de menú -->
   <div class="navbar">
-    <a href="index.html">Inicio</a>
+    <a href="index.html">Fast Shopping</a>
     <a href="nosotros.html">Niñas/Ninos</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="servicios.html">Bicicletas</a>
+    <a href="contacto.html">Abuelitos/Tas</a>
   </div>
 
-  <!-- Contenido de la página -->
-  <meta charset="UTF-8">
-    <title>Bienvenido a seccion de niñas y ninos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-        }
-        header {
-            background-color: #10110d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .productos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .producto {
-            background: white;
-            border: 1px solid #691212;
-            border-radius: 5px;
-            margin: 10px;
-            width: 250px;
-            text-align: center;
-            padding: 10px;
-        }
-        .producto img {
-            width: 100%;
-            height: auto;
-        }
-        .producto h3 {
-            margin: 10px 0;
-        }
-        .producto p {
-            color: #555;
-        }
-        .producto button {
-            background-color:#2f3d13;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #333;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-
-<header>
+  <header>
     <h1>Bienvenido a sección de niñas y niños</h1>
-    <p>Juguetes y peluches.</p>
-</header>
+    <h1>Juguetes y peluches.</h1>
+  </header>
 
-<main class="productos">
+  <main class="productos">
+    <!-- Ejemplo de productos con sus imágenes y precios -->
     <div class="producto">
-        <img src="Imagenes/bebe.webp" alt="bebe">
-        <h3>Para que el bebe jale</h3>
-        <td>S/.14.90</td>
-        <p>Esta hecho de madera, trae ruedas y pita para jalar</p>
-        <button>Agregar al carrito</button>
+      <img src="imagenes/bloques.jpg" alt="bloques">
+      <h3>Para que arme el bebe</h3>
+      <p>Bloques de construcciòn un juguete clàsico.</p>
+      <p class="precio">S/.33.90</p>
+      <button data-nombre="Para que el bebé jale" data-precio="33.90">Agregar al carrito</button>
     </div>
+
     <div class="producto">
-        <img src="Imagenes/minicoche.jpg" alt="minicoche">
-        <h3>Mini coche</h3>
-        <td>S/.55.90</td>
-        <p>Set de camión de bomberos tiene 6 y 6 miniatomoviles</p>
-        <button>Agregar al carrito</button>
+      <img src="imagenes/camiones.jpg" alt="camiones">
+      <h3>Mini coche</h3>
+      <p>Set de camiones, tiene 18 piezas de coches urbanos variados.</p>
+      <p class="precio">S/.55.90</p>
+      <button data-nombre="Mini coche" data-precio="55.90">Agregar al carrito</button>
     </div>
+
     <div class="producto">
-        <img src="imagenes/dinosaurio.webp">
-        <h3>dinosaurio </h3>
-        <td>S/.15.90</td>
-        <p>Animales miden aprox de 9cm</p>
-        <button>Agregar al carrito</button>
+      <img src="imagenes/dinosaurio.webp" alt="dinosaurio">
+      <h3>Dinosaurio variado de 12 piezas</h3>
+      <p>Animales miden aproximadamente 9cm. Vienen 12 piezas con árboles, pastos y otros accesorios.</p>
+      <p class="precio">S/.15.90</p>
+      <button data-nombre="Dinosaurio variado de 12 piezas" data-precio="15.90">Agregar al carrito</button>
     </div>
+
     <div class="producto">
-      <img src="Imagenes/optimus.webp" alt="optimus">
-      <h3>Optimus</h3>
-      <td>S/.88.90</td>
-      <p>Optimus prime juguete de accion que se transforma.</p>
-      <button>Agregar al carrito</button>
+      <img src="imagenes/transformer.jpg" alt="transformer">
+      <h3>Transformers</h3>
+      <p>Optimus Prime, juguete de acción que se transforma de robot a vehículo.</p>
+      <p class="precio">S/.88.90</p>
+      <button data-nombre="Transformers" data-precio="88.90">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/muñeca.jpg" alt="muñeca">
+      <h3>Muñeca Cute</h3>
+      <p>Muñeca para bebé de 21 cm, incluye accesorios para que se divierta.</p>
+      <p class="precio">S/.14.90</p>
+      <button data-nombre="Muñeca Cute" data-precio="14.90">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/frozen.webp" alt="frozen">
+      <h3>Frozen II</h3>
+      <p>Set de figuras articulables de Frozen II. Vienen los personajes principales.</p>
+      <p class="precio">S/.99.90</p>
+      <button data-nombre="Frozen II" data-precio="99.90">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/maquillaje.jpg" alt="maquillaje">
+      <h3>Kit de Maquillaje</h3>
+      <p>Juguete de maquillaje lavable para niñas. Juego de maquillaje real que incluye 25 piezas.</p>
+      <p class="precio">S/.70.70</p>
+      <button data-nombre="Kit de Maquillaje" data-precio="74.70">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/cajero.jpg" alt="cajero">
+      <h3>Alcancía de juguete</h3>
+      <p>Alcancía para ahorrar dinero, estilo cajero automático con contraseñas de 4 dígitos.</p>
+      <p class="precio">S/.25.90</p>
+      <button data-nombre="Alcancía de juguete" data-precio="25.90">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/peluches.jpg" alt="peluches">
+      <h3>Juego de Peluches</h3>
+      <p>Mini juego de peluches con diferentes animalitos adorables. Viene con 32 piezas.</p>
+      <p class="precio">S/.84.90</p>
+      <button data-nombre="Juego de Peluches" data-precio="84.90">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/mickey.jpg" alt="mickey">
+      <h3>Peluche de Mickey y Minnie</h3>
+      <p>Peluche grande de 19 pulgadas de Disney Junior.</p>
+      <p class="precio">S/.33.90</p>
+      <button data-nombre="Peluche de Mickey y Minnie" data-precio="33.90">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/stitch.jpg" alt="Stitch">
+      <h3>Stitch</h3>
+      <p>Peluche esponjoso de 25 cm.</p>
+      <p class="precio">S/.29.90</p>
+      <button data-nombre="Stitch" data-precio="29.90">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="imagenes/pikachu.webp" alt="pikachu">
+      <h3>Pikachu</h3>
+      <p>Peluche de Pokémon Detective.</p>
+      <p class="precio">S/.34.90</p>
+      <button data-nombre="Pikachu" data-precio="34.90">Agregar al carrito</button>
+    </div>
+  </main>
+
+  <div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p>total:S/.<span id="total">0.00</span></p>
+    <button id="comprar-btn">
+      <img src="https://img.icons8.com/ios/50/000000/shopping-cart.png" alt="compra">
+      Comprar
+    </button>
+    <p id="mensaje-gracias">Gracias por su compra, ¡vuelva pronto!</p>
   </div>
-  <div class="producto">
-    <img src="Imagenes/kit.jpg" alt="kit">
-    <h3>Carro remoto</h3>
-    <td>S/.99.90</td>
-    <p>Kit de construcion control remoto juguete de niños</p>
-    <button>Agregar al carrito</button>
-</div>
-<div class="producto">
-  <img src="Imagenes/alcancìa.jpg" alt="alcancia">
-  <h3>alcancia de juguete</h3>
-  <td>S/.25.90</td>
-  <p>Alcancia para ahorra dinero estilo cajero automatico.</p>
-  <button>Agregar al carrito</button>
-</div>
+
+  <script>
+    const carrito = [];
+    const botones = document.querySelectorAll('.producto button');
+    const carritoLista = document.getElementById('lista-carrito');
+    const totalSpan = document.getElementById('total');
+    const comprarBtn = document.getElementById('comprar-btn');
+    const mensajeGracias = document.getElementById('mensaje-gracias');
+
+    botones.forEach(btn => {
+      const nombre = btn.dataset.nombre;
+      const precio = parseFloat(btn.dataset.precio);
+
+      btn.addEventListener('click', () => {
+        agregarAlCarrito(nombre, precio);
+      });
+    });
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      mostrarCarrito();
+    }
+
+    function mostrarCarrito() {
+      carritoLista.innerHTML = ''; // Limpiar la lista del carrito
+      let total = 0;
+
+      carrito.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.nombre} - S/.${item.precio.toFixed(2)}`;
+        carritoLista.appendChild(li);
+        total += item.precio;
+      });
+
+      totalSpan.textContent = total.toFixed(2);
+
+      // Mostrar el botón de comprar si hay productos en el carrito
+      if (carrito.length > 0) {
+        comprarBtn.style.display = 'inline-block';
+      } else {
+        comprarBtn.style.display = 'none';
+      }
+    }
+
+    comprarBtn.addEventListener('click', () => {
+      // Vaciar el carrito
+      carrito.length = 0;
+      mostrarCarrito();
+
+      // Mostrar mensaje de gracias
+      mensajeGracias.style.display = 'block';
+      setTimeout(() => {
+        mensajeGracias.style.display = 'none'; // Ocultar mensaje después de 5 segundos
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
