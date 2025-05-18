@@ -1,0 +1,176 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222121;
+    color: #333;
+    animation: fadeIn 0.5s ease;
+  }
+  .navbar {
+    background-color: brown;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: rgb(17, 14, 14);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  .navbar a:hover,
+  .navbar a.active {
+    background-color: #fff;
+    color: brown;
+  }
+  /* Contador visible en navbar */
+  .navbar .cart-link {
+    float: right;
+    position: relative;
+  }
+  .navbar .cart-link span {
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    animation: bounce 0.5s;
+  }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url("imagenes/fondo-header.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    animation: slideDown 0.5s ease;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+  }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .producto {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .producto img {
+    width: 100%; height: auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+  }
+  .producto img:hover {
+    transform: scale(1.05);
+  }
+  .producto h4 {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    animation: fadeInUp 0.5s ease;
+  }
+  .producto h5 {
+    margin: 0 0 10px;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  .producto button {
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .producto button:hover {
+    background-color: #8b0000;
+    transform: scale(1.05);
+  }
+  /* Carrito panel (solo en carrito.html) */
+  #cartPanel {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease;
+  }
+  #buyBtn, #paymentForm button {
+    background: green;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  #buyBtn:hover, #paymentForm button:hover {
+    background: #006400;
+    transform: scale(1.02);
+  }
+  #paymentForm {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+  }
+  #paymentForm input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  #paymentForm input:focus {
+    border-color: brown;
+  }
+  /* Animations */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

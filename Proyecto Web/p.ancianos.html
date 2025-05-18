@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos para Abuelitos - Fast Shopping</title>
+  <link rel="stylesheet" href="css/p.ancianos.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="nosotros.html">Niñas / Niños</a>
+    <a href="bicicletas.html">Bicicletas</a>
+    <a href="p.ancianos.html">Abuelitos / Abuelitas</a>
+    <a href="contacto.html">Contacto </a>
+    <a href="carrito.html" class="cart-link">
+      Carrito <span id="cartCount">0</span>
+    </a>
+  </nav>
+
+  <header>
+    <h1>Productos para Abuelitos</h1>
+    <p>Comodidad y cuidado pensados para ellos</p>
+  </header>
+
+  <main class="productos">
+    <div class="producto">
+      <img src="imagenes/Silla_ducha.webp" alt="Silla de ducha">
+      <h4>Silla de Ducha Antideslizante</h4>
+      <p>S/127.03</p>
+      <button onclick="addToCart('Silla de Ducha Antideslizante', 127.03)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="imagenes/pastillerosemanal.webp" alt="Pastillero">
+      <h4>Pastillero Diario en Braille</h4>
+      <p>S/25.00</p>
+      <button onclick="addToCart('Pastillero Diario en Braille', 25.00)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="imagenes/bastonled.webp" alt="Bastón LED">
+      <h4>Bastón LED con Alarma SOS</h4>
+      <p>S/690.45</p>
+      <button onclick="addToCart('Bastón LED con Alarma SOS', 690.45)">Agregar al carrito</button>
+    </div>
+  </main>
+
+<section class="categorias">
+  <h2>Categorías Destacadas</h2>
+  <div class="categoria-grid">
+    <div class="categoria-card">
+      <img src="imagenes/walker.png" alt="Movilidad">
+      <h3>Ayudas para Movilidad</h3>
+    </div>
+    <div class="categoria-card">
+      <img src="imagenes/healthcare.png" alt="Salud">
+      <h3>Cuidado de la Salud</h3>
+    </div>
+    <div class="categoria-card">
+      <img src="imagenes/house.png" alt="Hogar">
+      <h3>Adaptaciones para el Hogar</h3>
+    </div>
+  </div>
+</section>
+
+<section class="beneficios">
+  <div class="beneficio">
+    <img src="imagenes/delivery.png" alt="Envío">
+    <h3>Envío Gratis desde S/200</h3>
+    <p>En compras mayores a S/200</p>
+  </div>
+  <div class="beneficio">
+    <img src="imagenes/ribbon.png" alt="Garantía">
+    <h3>Garantía de 1 Año</h3>
+    <p>En todos nuestros productos</p>
+  </div>
+  <div class="beneficio">
+    <img src="imagenes/customer-service.png" alt="Asesoría">
+    <h3>Asesoría Especializada</h3>
+    <p>Línea gratuita: 0800-55555</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Nuestra Misión</h4>
+      <p>Brindar soluciones innovadoras para mejorar la calidad d6e vida de nuestros adultos mayores</p>
+    </div>
+    <div class="footer-section">
+      <h4>Contacto</h4>
+      <p>📞 (01) 123-4567</p>
+      <p>📧 info@fastshopping.com</p>
+    </div>
+    <div class="footer-section">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="#"><img src="imagenes/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="imagenes/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

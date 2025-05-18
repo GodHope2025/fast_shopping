@@ -1,0 +1,30 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Barra de menú */
+    .navbar {
+      background-color: #d43d3d;
+      overflow: hidden;
+    }
+
+    /* Estilo de los enlaces */
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    /* Cambio de color al pasar el mouse */
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Contenido principal */
+    .content {
+      padding: 20px;
+    }
